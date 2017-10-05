@@ -11,6 +11,7 @@ export default class GameApp extends React.Component {
         super(props);
         
         this.state = {
+            gamePot: 1000,
             gamePhase: 'start'      //start, bet
         };
     }
@@ -19,7 +20,7 @@ export default class GameApp extends React.Component {
         return (
             <div className="game-table">
                 <h1>Between the Sheets</h1>
-                <Pot />
+                <Pot pot={this.state.gamePot}/>
                 <CardSpread />
                 <BetRow />
                 <PlayerRow />

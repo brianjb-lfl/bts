@@ -1,0 +1,9 @@
+.pot-row {
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.pot-string {
+  display: inline-block;
+}
