@@ -1,0 +1,23 @@
+.player-row {
+  width: 100%;
+  margin: 36px auto;
+  font-size: 24px;
+}
+
+.player-row div{
+  width: 25%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.player-row div span {
+  margin-left: 20px;
+}
+
+button {
+  display: block;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 20px;
+}
