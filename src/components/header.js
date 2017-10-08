@@ -9,7 +9,7 @@ export default class Header extends React.Component {
       <div className="header-block">
         <h1>Between the Sheets</h1>
         <div className="header-nav">
-          <HeaderNav />
+          <HeaderNav onNewGame={this.props.onNewGame}/>
         </div>
       </div>
     );
