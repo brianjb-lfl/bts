@@ -14,6 +14,9 @@ export default class PlayerRowStacks extends React.Component {
           <span>$ {this.props.playerStack
                 .toLocaleString('en-US', {style: 'decimal', maximumFractionDigits: 0})}</span>
         </div>
+        <div className="continue-div">
+          <button type="button" id="continue-btn" className="short-btn">Continue</button>
+        </div>
       </div>
     );
   }

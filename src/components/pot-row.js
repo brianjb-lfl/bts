@@ -5,7 +5,9 @@ export default class Pot extends React.Component {
   render() {
     const displayPotRowOpts = {
       start: false,
-      bet: true
+      bet: true,
+      game: true,
+      end: true
     }
     
     let potRow;

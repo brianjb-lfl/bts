@@ -13,7 +13,7 @@ export default class GameApp extends React.Component {
         super(props);
         
         this.state = {
-            gameState: 'start',                     // start
+            gameState: 'end',                     // start / bet / game / end
             gamePot: 1000,
             playerStack: 500,
             playerBet: 0,

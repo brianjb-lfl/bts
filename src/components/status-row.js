@@ -6,7 +6,9 @@ export default class StatusRow extends React.Component {
   render() {
     const statusObj = {
       start: 'Click START to begin',
-      bet: 'Place your bet'
+      game: 'Game text',
+      bet: 'Place your bet',
+      end: 'Click button to play again'
     }
 
     return (
