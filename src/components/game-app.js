@@ -42,6 +42,21 @@ export default class GameApp extends React.Component {
     })
   }
 
+  startPlay() {
+    const updatedCards = this.state.currDeck.slice();
+    let updatedCurrCards = updatedCards.splice(0,3);
+    if(Number(updatedCurrCards[0].slice(1)) > Number(updatedCurrCards[2].slice(1))) {
+      let tempCard = updatedCurrCards[0];
+      updatedCurrCards[0] = updatedCurrCards[2];
+      updatedCurrCards[2] = tempCard;
+    }
+    this.setState ({
+      currDeck: updatedCards,
+      currCards: updatedCurrCards,
+      gameState: 'bet'
+    })
+  }
+
   render() {
     return (
       <div className="game-table">
@@ -50,7 +65,8 @@ export default class GameApp extends React.Component {
         <CardSpread cardArr={this.state.currCards} />
         <PlayerRow playerBet={this.state.playerBet} 
                     playerStack={this.state.playerStack}
-                    gameState={this.state.gameState}/>
+                    gameState={this.state.gameState}
+                    onStart={() => this.startPlay()} />
         <StatusRow gameState={this.state.gameState}/>
       </div>
     );

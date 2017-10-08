@@ -9,7 +9,7 @@ export default class PlayerRow extends React.Component {
   render() {
 
     const playerRows = {
-      start: <PlayerRowStart />,
+      start: <PlayerRowStart onStart={this.props.onStart}/>,
       game: <PlayerRowStacks playerBet={this.props.playerBet} playerStack={this.props.playerStack} />,
       bet: <PlayerRowBet playerStack={this.props.playerStack}/>,
       end: <PlayerRowEnd playerStack={this.props.playerStack}/>
