@@ -9,10 +9,15 @@ export default class PlayerRow extends React.Component {
   render() {
 
     const playerRows = {
-      start: <PlayerRowStart onStart={this.props.onStart}/>,
-      game: <PlayerRowStacks playerBet={this.props.playerBet} playerStack={this.props.playerStack} />,
-      bet: <PlayerRowBet playerStack={this.props.playerStack}/>,
-      end: <PlayerRowEnd playerStack={this.props.playerStack}/>
+      start: <PlayerRowStart onStart={this.props.onStart} />,
+      game: <PlayerRowStacks 
+              playerBet={this.props.playerBet} 
+              playerStack={this.props.playerStack}
+              onContinue={this.props.onContinue} />,
+      bet: <PlayerRowBet 
+            playerStack={this.props.playerStack}
+            onBet={this.props.onBet} />,
+      end: <PlayerRowEnd playerStack={this.props.playerStack} />
     }
    
     return (
