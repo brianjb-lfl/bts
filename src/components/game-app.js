@@ -105,7 +105,7 @@ export default class GameApp extends React.Component {
       tempDeck = this.state.currDeck.slice();
       tempDeck.splice(0,2);
       if (tempDeck.length <=12) {
-        tempDeck = shuffle.slice();
+        tempDeck = shuffle().slice();
       }
 
       this.setState ({

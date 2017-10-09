@@ -5,14 +5,14 @@
 const shuffle = () => {
 
   const cardDeck = [
-    'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 
-    'S9', 'S10', 'S11', 'S12', 'S13', 'S14',
-    'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8', 
-    'H9', 'H10', 'H11', 'H12', 'H13', 'H14',
-    'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 
-    'C9', 'C10', 'C11', 'C12', 'C13', 'C14',
-    'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 
-    'D9', 'D10', 'D11', 'D12', 'D13', 'D14'
+    'spa♠2', 'spa♠3', 'spa♠4', 'spa♠5', 'spa♠6', 'spa♠7', 'spa♠8', 
+    'spa♠9', 'spa♠10', 'spa♠11', 'spa♠12', 'spa♠13', 'spa♠14',
+    'hrt♥2', 'hrt♥3', 'hrt♥4', 'hrt♥5', 'hrt♥6', 'hrt♥7', 'hrt♥8', 
+    'hrt♥9', 'hrt♥10', 'hrt♥11', 'hrt♥12', 'hrt♥13', 'hrt♥14',
+    'clu♣2', 'clu♣3', 'clu♣4', 'clu♣5', 'clu♣6', 'clu♣7', 'clu♣8', 
+    'clu♣9', 'clu♣10', 'clu♣11', 'clu♣12', 'clu♣13', 'clu♣14',
+    'dia♦2', 'dia♦3', 'dia♦4', 'dia♦5', 'dia♦6', 'dia♦7', 'dia♦8', 
+    'dia♦9', 'dia♦10', 'dia♦11', 'dia♦12', 'dia♦13', 'dia♦14'
   ];
 
   let shuffledCards = cardDeck.slice();
