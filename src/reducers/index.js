@@ -7,7 +7,7 @@ const initialState = {
   playerStack: 1000,
   playerBet: 500,
   currDeck: shuffle().slice(),
-  currCards: ['spa♠3', 'dia♦6', 'hrt♥11']
+  currCards: ['spa♠3', 'dia♦6', 'hrt♥11'],
 }
 
   // currCards: ['', '', ''],

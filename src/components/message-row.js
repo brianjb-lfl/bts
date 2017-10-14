@@ -1,26 +1,30 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import './message-row.css';
 
-export default class MessageRow extends React.Component {
+export class MessageRow extends React.Component {
 
   render() {
-    let status = '';
-    const statusObj = {
+    let message = '';
+    const msgObj = {
       start: 'Click START to begin',
       game: 'Game text',
       bet: 'Place your bet',
       end: 'Click button to play again'
     }
 
-    if(this.props.statusStr === ''){
-      status = statusObj[this.props.gameState];
-    }
-    else {
-      status = this.props.statusStr;
-    }
+    message = msgObj[this.props.gameState];
 
     return (
-      <div className="status-text">{status}</div>
+      <div className="message-text">
+        <span className="message-text">{message}</span>
+      </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  gameState: state.gameState
+});
+
+export default connect(mapStateToProps)(MessageRow);
