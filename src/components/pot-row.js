@@ -1,7 +1,7 @@
 import React from 'react';
 import './pot-row.css';
 
-export default class Pot extends React.Component {
+export default class PotRow extends React.Component {
   render() {
     const displayPotRowOpts = {
       start: false,

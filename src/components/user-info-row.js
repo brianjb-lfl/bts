@@ -3,9 +3,9 @@ import PlayerRowStart from './player-row-start';
 import PlayerRowStacks from './player-row-stacks';
 import PlayerRowBet from './player-row-bet';
 import PlayerRowEnd from './player-row-end';
-import './player-row.css';
+import './user-info-row.css';
 
-export default class PlayerRow extends React.Component {
+export default class UserInfoRow extends React.Component {
   render() {
 
     const playerRows = {

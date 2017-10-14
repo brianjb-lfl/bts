@@ -1,7 +1,7 @@
 import React from 'react';
-import './status-row.css';
+import './message-row.css';
 
-export default class StatusRow extends React.Component {
+export default class MessageRow extends React.Component {
 
   render() {
     let status = '';

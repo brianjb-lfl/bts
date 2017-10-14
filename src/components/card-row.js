@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from './card';
-import './card-spread.css';
+import './card-row.css';
 const {cardDeck} = require('./cardDeck.js');
 
-export default class CardSpread extends React.Component {
+export default class CardRow extends React.Component {
   
   render() {
     const cards = this.props.cardArr.map((card, index) =>

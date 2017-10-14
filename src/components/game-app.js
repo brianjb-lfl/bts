@@ -1,7 +1,8 @@
 import React from 'react';
-import Header from './header';
+import HeaderRow from './header-row';
 import PotRow from './pot-row';
-import CardSpread from './card-spread';
+import CardRow from './card-row';
+import MessageRow from './message-row';
 import PlayerRow from './player-row';
 import StatusRow from './status-row';
 import {shuffle} from './cardDeck';
@@ -122,10 +123,12 @@ export default class GameApp extends React.Component {
   render() {
     return (
       <div className="game-table">
-        <Header onNewGame={() =>this.newGame()} />
+        <HeaderRow onNewGame={() =>this.newGame()} />
         <PotRow pot={this.state.gamePot} gameState={this.state.gameState} />
-        <CardSpread cardArr={this.state.currCards} />
-        <PlayerRow playerBet={this.state.playerBet} 
+        <CardRow cardArr={this.state.currCards} />
+        <MessageRow />
+        <UserActRow />
+        <UserInfoRow playerBet={this.state.playerBet} 
                     playerStack={this.state.playerStack}
                     gameState={this.state.gameState}
                     onStart={() => this.startPlay()}
