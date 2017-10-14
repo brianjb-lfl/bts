@@ -1,7 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {Provider} from 'react-redux';
+import store from './store';
 import GameApp from './components/game-app';
+import './index.css';
 
-ReactDOM.render(<GameApp />, document.getElementById('root'));
+
+ReactDOM.render(
+  <Provider store={store}>
+    <GameApp />
+  </Provider>,
+  document.getElementById('root')
+);
 

@@ -10,13 +10,13 @@ export default class HeaderNav extends React.Component {
   render() {
     return (
       <div className="header-nav">
-        <span>
-          <a className="new-link" href="#" onClick={e => this.onNewGame(e)}>
-            New Game
-          </a>
-        </span>
+        <span>{'New'}</span>
         <span>{'Rules'}</span>
       </div>
     );
   }
 }
+
+{/* <a className="new-link" href="#" onClick={e => this.onNewGame(e)}>
+New Game
+</a> */}

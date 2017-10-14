@@ -1,10 +1,12 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import './pot-row.css';
 
-export default class PotRow extends React.Component {
+export class PotRow extends React.Component {
   render() {
+    
     const displayPotRowOpts = {
-      start: false,
+      start: true,
       bet: true,
       game: true,
       end: true
@@ -16,7 +18,7 @@ export default class PotRow extends React.Component {
       potRow = 
         <div className="pot-row">
           <b>Pot:</b>
-          <span className="pot-string">$ {this.props.pot
+          <span className="pot-string">$ {this.props.gamePot
             .toLocaleString('en-US', {style: 'decimal', maximumFractionDigits: 0})}</span>
         </div>
     }
@@ -31,3 +33,10 @@ export default class PotRow extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  gameState: state.gameState,
+  gamePot: state.gamePot
+});
+
+export default connect(mapStateToProps)(PotRow);

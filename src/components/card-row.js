@@ -1,12 +1,13 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Card from './card';
 import './card-row.css';
 const {cardDeck} = require('./cardDeck.js');
 
-export default class CardRow extends React.Component {
+export class CardRow extends React.Component {
   
   render() {
-    const cards = this.props.cardArr.map((card, index) =>
+    const cards = this.props.currCards.map((card, index) =>
       <Card key={index} card={card} />
     )
 
@@ -15,9 +16,11 @@ export default class CardRow extends React.Component {
         <div className="card-block">{cards}</div>
       </div>
     )
-
-
   }
-
-
 }
+
+const mapStateToProps = state => ({
+  currCards: state.currCards
+});
+
+export default connect(mapStateToProps)(CardRow);

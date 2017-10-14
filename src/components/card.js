@@ -29,6 +29,5 @@ export default function Card(props) {
 
   return (
       cardDivs[cardSuit]
-      //<div className="{classStr}">{cardStr}</div>
   );
 }
