@@ -91,10 +91,11 @@ export default class GameApp extends React.Component {
   render() {
     return (
       <div className="game-table">
-        <HeaderRow onNewGame={() =>this.newGame()} />
+        <HeaderRow />
         <PotRow />
         <CardRow />
         <MessageRow />
+        <UserActRow />
       </div>
     );
   }
@@ -106,7 +107,6 @@ const mapStateToProps = state => ({
 
 
 
-//<UserActRow />
 //<UserInfoRow playerBet={this.state.playerBet} 
 //            playerStack={this.state.playerStack}
 //            gameState={this.state.gameState}
