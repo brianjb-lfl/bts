@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {startGame} from '../actions';
-import {anteUp} from '../actions';
+import {placeBet, startGame} from '../actions';
 import './message-row.css';
 
 export class MessageRow extends React.Component {
@@ -12,8 +11,7 @@ export class MessageRow extends React.Component {
   }
 
   goAnte() {
-    let ante = Math.min(this.props.anteSize, this.props.playerStack)
-    this.props.dispatch(anteUp(ante, this.props.playerStack - ante));
+    this.props.dispatch(placeBet());
   }
 
   render() {
@@ -44,8 +42,6 @@ export class MessageRow extends React.Component {
 
 const mapStateToProps = state => ({
   gameState: state.gameState,
-  anteSize: state.anteSize,
-  playerStack: state.playerStack
 });
 
 export default connect(mapStateToProps)(MessageRow);

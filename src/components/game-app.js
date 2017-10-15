@@ -11,7 +11,7 @@ import {shuffle} from '../actions';
 
 import './game-app.css';
 
-export default class GameApp extends React.Component {
+export class GameApp extends React.Component {
 
   // startPlay() {
   //   const updatedCards = this.state.currDeck.slice();
@@ -97,7 +97,6 @@ export default class GameApp extends React.Component {
         <MessageRow />
         <UserActRow />
         <UserInfoRow />
-
       </div>
     );
   }
@@ -107,6 +106,7 @@ const mapStateToProps = state => ({
   ...state
 });
 
+export default connect(mapStateToProps)(GameApp);
 
 
 // <UserActRow />
