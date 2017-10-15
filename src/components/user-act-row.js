@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {UserActBet} from './user-act-bet';
+import UserActBet from './user-act-bet';
 import './user-act-row.css';
 
 export class UserActRow extends React.Component {

@@ -1,27 +1,26 @@
 import React from 'react';
-import PlayerRowStart from './player-row-start';
-import PlayerRowStacks from './player-row-stacks';
-import PlayerRowBet from './player-row-bet';
-import PlayerRowEnd from './player-row-end';
+import {connect} from 'react-redux';
 import './user-info-row.css';
 
-export default class UserInfoRow extends React.Component {
+export class UserInfoRow extends React.Component {
   render() {
-
-    const playerRows = {
-      start: <PlayerRowStart onStart={this.props.onStart} />,
-      game: <PlayerRowStacks 
-              playerBet={this.props.playerBet} 
-              playerStack={this.props.playerStack}
-              onContinue={this.props.onContinue} />,
-      bet: <PlayerRowBet 
-            playerStack={this.props.playerStack}
-            onBet={this.props.onBet} />,
-      end: <PlayerRowEnd playerStack={this.props.playerStack} />
-    }
-   
     return (
-      playerRows[this.props.gameState]
+      <div className="user-info">
+        <div id="player-bet-string">$ {this.props.playerBet
+          .toLocaleString('en-US', {style: 'decimal', maximumFractionDigits: 0})}
+        </div>
+        <div id="player-stack-string">$ {this.props.playerStack
+          .toLocaleString('en-US', {style: 'decimal', maximumFractionDigits: 0})}
+        </div>
+      </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  playerBet: state.playerBet,
+  playerStack: state.playerStack,
+  currDeck: state.currDeck
+});
+
+export default connect(mapStateToProps)(UserInfoRow);

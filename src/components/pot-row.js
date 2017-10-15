@@ -19,7 +19,8 @@ export class PotRow extends React.Component {
         <div className="pot-row">
           <b>Pot:</b>
           <span className="pot-string">$ {this.props.gamePot
-            .toLocaleString('en-US', {style: 'decimal', maximumFractionDigits: 0})}</span>
+            .toLocaleString('en-US', {style: 'decimal', maximumFractionDigits: 0})}
+          </span>
         </div>
     }
     else {

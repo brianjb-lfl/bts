@@ -96,6 +96,8 @@ export default class GameApp extends React.Component {
         <CardRow />
         <MessageRow />
         <UserActRow />
+        <UserInfoRow />
+
       </div>
     );
   }
@@ -107,7 +109,8 @@ const mapStateToProps = state => ({
 
 
 
-//<UserInfoRow playerBet={this.state.playerBet} 
+// <UserActRow />
+// <UserInfoRow playerBet={this.state.playerBet} 
 //            playerStack={this.state.playerStack}
 //            gameState={this.state.gameState}
 //            onStart={() => this.startPlay()}
