@@ -20,6 +20,7 @@ export class CardRow extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  gameState: state.gameState,
   currCards: state.currCards
 });
 

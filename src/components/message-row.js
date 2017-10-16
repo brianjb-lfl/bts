@@ -1,17 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {placeBet, startGame} from '../actions';
+import {anteUp, placeBet, startGame} from '../actions';
 import './message-row.css';
 
 export class MessageRow extends React.Component {
 
   goStart() {
-    console.log('running goStart');
     this.props.dispatch(startGame());
   }
 
   goAnte() {
-    this.props.dispatch(placeBet());
+    this.props.dispatch(anteUp());
   }
 
   render() {

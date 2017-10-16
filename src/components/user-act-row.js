@@ -6,12 +6,23 @@ import './user-act-row.css';
 export class UserActRow extends React.Component {
 
   render() {
+
+    let uaBet = '';
+
+    if(this.props.gameState === 'bet') {
+      uaBet = <UserActBet />;
+    }
+
     return (
       <div className="user-act-row">
-        <UserActBet />
+        {uaBet}
       </div>
     );
   }
 }
 
-export default connect()(UserActRow);
+const mapStateToProps = state => ({
+  gameState: state.gameState,
+});
+
+export default connect(mapStateToProps)(UserActRow);

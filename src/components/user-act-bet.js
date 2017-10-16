@@ -6,9 +6,9 @@ export class UserActBet extends React.Component {
   
   placeBet(event) {
     event.preventDefault();
-    this.props.dispatch(placeBet);
+    this.props.dispatch(placeBet(this.betInput.value));
+    this.betInput.value = '';
   }
-
 
   render() {
     return (

@@ -6,8 +6,8 @@ export default function Card(props) {
   let cardStr;
   let cardSuit;
   
-  if (props.card === '') {
-    cardStr = ''
+  if (props.card === '?') {
+    cardStr = '?'
     cardSuit = 'blk'
   }
   else {
@@ -28,6 +28,6 @@ export default function Card(props) {
   };
 
   return (
-      cardDivs[cardSuit]
+    cardDivs[cardSuit]
   );
 }
