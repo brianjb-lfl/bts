@@ -18,8 +18,10 @@ const shuffle = () => {
   let shuffledCards = cardDeck.slice();
   let tempCard = '';
   let selCard;
+
+  // shuffle cards - Fisher-Yates
   for(let i = (shuffledCards.length - 1); i > 0; i--) {
-    selCard = Math.ceil(Math.random()*(i+1))-1;
+    selCard = Math.floor(Math.random()*(i+1))-1;
     tempCard = shuffledCards[selCard];
     shuffledCards[selCard] = shuffledCards[i];
     shuffledCards[i] = tempCard;

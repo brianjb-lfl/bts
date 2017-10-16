@@ -17,6 +17,3 @@ export default class HeaderNav extends React.Component {
   }
 }
 
-{/* <a className="new-link" href="#" onClick={e => this.onNewGame(e)}>
-New Game
-</a> */}

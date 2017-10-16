@@ -9,7 +9,11 @@ export class PotRow extends React.Component {
       start: true,
       bet: true,
       game: true,
-      end: true
+      end: true,
+      ante: true,
+      show: true,
+      results: true,
+      endHand: true
     }
     
     let potRow;

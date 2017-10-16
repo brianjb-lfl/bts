@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {anteUp, placeBet, startGame} from '../actions';
+import {anteUp, placeBet, startGame, settleUp, nextHand} from '../actions';
 import './message-row.css';
 
 export class MessageRow extends React.Component {
@@ -13,8 +13,19 @@ export class MessageRow extends React.Component {
     this.props.dispatch(anteUp());
   }
 
+  goSettle() {
+    this.props.dispatch(settleUp());
+  }
+
+  goNext() {
+    this.props.dispatch(nextHand());
+  }
+
   render() {
+    
     let message = '';
+
+    // define message code for each gameState
     const msgObj = {
       start: <button 
                 type="button"
@@ -25,8 +36,21 @@ export class MessageRow extends React.Component {
                 className="message-btn" 
                 onClick={ () => this.goAnte()}>Ante Up</button>,
       game: 'Game text',
+      show: <div>
+              <span>{this.props.handResult}</span>
+              <button 
+                type="button"
+                className="message-btn" 
+                onClick={ () => this.goSettle()}>Settle Up</button>
+            </div>,
       bet: 'Place your bet',
-      end: 'Click button to play again'
+      endHand:  <div>
+                  <span>Settled ... burned 2 cards ... </span>
+                  <button 
+                    type="button"
+                    className="message-btn" 
+                    onClick={ () => this.goNext()}>Continue</button>
+                </div>
     }
 
     message = msgObj[this.props.gameState];
@@ -41,6 +65,7 @@ export class MessageRow extends React.Component {
 
 const mapStateToProps = state => ({
   gameState: state.gameState,
+  handResult: state.handResult
 });
 
 export default connect(mapStateToProps)(MessageRow);

@@ -14,7 +14,7 @@ span.message-text {
 }
 
 .message-btn {
-  display: block;
+  display: inline-block;
   margin: 6px auto;
   height: 28px;
   width: 120px;

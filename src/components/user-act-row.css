@@ -1,3 +1,23 @@
+.user-act-row {
+  margin: 20px;
+}
+
 h3 {
   font-size: 16px;
+}
+
+input {
+  height: 28px;
+  width: 160px;
+  padding: 5px;
+  border-width: 4px;
+  border-color: #908e8e;
+  font-size: 24px;
+}
+
+button {
+  height: 36px;
+  width: 120px;
+  font-size: 24px;
+  margin-left: 12px;
 }
